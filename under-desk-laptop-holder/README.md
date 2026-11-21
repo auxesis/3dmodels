@@ -1,5 +1,7 @@
 # Under-desk laptop holder for the Dell Latitude 5531
 
+![The right arm, seen from the laptop side. The outer wall has a long opening for the ports.](right-arm.png)
+
 This folder contains a pair of 3D printed arms for keeping a closed laptop under a desk.
 The arms fit the Dell Latitude 15 5531.
 The laptop slides in from the front and sits on a shelf along each side.
