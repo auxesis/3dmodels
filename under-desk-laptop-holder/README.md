@@ -4,8 +4,9 @@ This folder contains a pair of 3D printed arms that hold a closed laptop under a
 The arms fit the Dell Latitude 15 5531.
 The laptop slides in from the front and rests on a shelf along each side.
 
-The side walls of the arms are open between a post at each end.
-You can plug in network, USB, HDMI and Thunderbolt cables while the laptop is in the holder.
+The side walls of the arms are open alongside the laptop's ports.
+You can plug in network, USB, HDMI, and Thunderbolt cables while the laptop is in the holder.
+In front of the ports, the walls have a honeycomb of hexagonal holes for extra support.
 
 ## Inspiration
 
@@ -29,7 +30,9 @@ Seen from the front, each arm is shaped like the letter C.
 - The top plate screws to the underside of the desk.
 - The shelf at the bottom holds the laptop.
 - The outer wall joins the top plate to the shelf.
-  The wall is open between a post at the front and a post at the rear.
+  The wall is open from 12 mm to 145 mm from the laptop's back edge, where the ports are.
+  In front of that opening, the wall has 2 staggered rows of hexagonal holes: 6 in the lower row and 5 in the upper row.
+  The plastic between the holes supports the front of the arm.
 - A small stop at the rear end of the shelf stops the laptop sliding out the back.
 - A shallow notch in the shelf near the rear leaves room for the network port.
   The network port has a jaw that flips down below the bottom of the laptop when you plug in a cable.
@@ -47,11 +50,16 @@ These sizes come from Dell's specifications for the Latitude 5531:
 | Gap between shelf and top plate | 27.05 mm, 3 mm more than the laptop's thickness |
 | Shelf depth under the laptop | 24 mm |
 | Overall height under the desk | 41 mm |
-| Weight of each arm | about 136 g |
+| Weight of each arm | about 144 g |
 
-To fit a different laptop, change the parameters in the SolidCraft design.
-The parameters `lap_w`, `lap_d` and `lap_h` set the laptop's width, depth and thickness.
-The parameters that start with `rj_` set the position of the network port notch.
+To fit a different laptop, change these parameters in the SolidCraft design:
+
+- `lap_w`, `lap_d`, and `lap_h` set the laptop's width, depth, and thickness.
+- The parameters that start with `rj_` set the position of the network port notch.
+- `port_end` sets where the port opening ends, measured from the laptop's back edge.
+- The parameters that start with `hex_` set the size, spacing, and number of the hexagonal holes.
+
+If you make the port opening longer, use fewer hexagonal holes, so the holes do not run into the opening.
 
 ## Print the arms
 
@@ -77,11 +85,19 @@ For example, use 16 mm screws for a 25 mm desk.
    The screw slots let you move each arm 4 mm sideways each way before you tighten the screws.
 5. Slide the closed laptop in from the front, until it touches the rear stops.
 
-## Check the network port notch first
+## The network port notch
 
-The position of the network port notch is an estimate.
-The notch starts 20 mm from the rear of the arm and is 45 mm long.
-Dell doesn't publish where the ports are along the side of the laptop.
+The notch runs from 20 mm to 65 mm from the back edge of the laptop.
+This position was checked on a real Latitude 5531.
 
-Before you print, measure from the back edge of the laptop to the network port.
-If the port isn't between 20 mm and 65 mm from the back edge, change `rj_from_rear` in the design.
+On that laptop, the ports on the right side run from 26.5 mm to 137 mm from the back edge.
+These measurements leave out the lock slot.
+The network port is the port nearest the back edge, so it starts 26.5 mm from the back edge.
+That is 6.5 mm inside the notch.
+
+All the ports are inside the open part of the wall.
+The opening ends 145 mm from the back edge.
+That leaves 8 mm in front of the SD card slot for your finger.
+
+If you change the design for a different laptop, measure from its back edge to its network port.
+If the port is not between 20 mm and 65 mm from the back edge, change `rj_from_rear` in the design.
