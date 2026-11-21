@@ -1,8 +1,9 @@
 # Under-desk laptop holder for the Dell Latitude 5531
 
-This folder contains a pair of 3D printed arms that hold a closed laptop under a desk.
+This folder contains a pair of 3D printed arms for keeping a closed laptop under a desk.
 The arms fit the Dell Latitude 15 5531.
-The laptop slides in from the front and rests on a shelf along each side.
+The laptop slides in from the front and sits on a shelf along each side.
+Each arm prints in one piece on a 180 mm print bed, such as the Bambu Lab A1 mini.
 
 The side walls of the arms are open alongside the laptop's ports.
 You can plug in network, USB, HDMI, and Thunderbolt cables while the laptop is in the holder.
@@ -31,7 +32,7 @@ Seen from the front, each arm is shaped like the letter C.
 - The shelf at the bottom holds the laptop.
 - The outer wall joins the top plate to the shelf.
   The wall is open from 12 mm to 145 mm from the laptop's back edge, where the ports are.
-  In front of that opening, the wall has 2 staggered rows of hexagonal holes: 6 in the lower row and 5 in the upper row.
+  In front of that opening, the wall has 3 hexagonal holes in 2 staggered rows: 2 below and 1 above.
   The plastic between the holes supports the front of the arm.
 - A small stop at the rear end of the shelf stops the laptop sliding out the back.
 - A shallow notch in the shelf near the rear leaves room for the network port.
@@ -46,15 +47,17 @@ These sizes come from Dell's specifications for the Latitude 5531:
 
 | Size | Value |
 |---|---|
-| Arm length | 230.3 mm, so the front of the laptop sticks out 3 mm to grab |
-| Gap between shelf and top plate | 27.05 mm, 3 mm more than the laptop's thickness |
+| Arm length | 172 mm, or 176 mm with the rear stop |
+| Laptop past the front of the arms | about 61 mm, to grab |
+| Gap between shelf and top plate | 40.05 mm, 16 mm more than the laptop's thickness |
 | Shelf depth under the laptop | 24 mm |
-| Overall height under the desk | 41 mm |
-| Weight of each arm | about 144 g |
+| Overall height under the desk | 54 mm |
+| Weight of each arm | about 106 g |
 
 To fit a different laptop, change these parameters in the SolidCraft design:
 
 - `lap_w`, `lap_d`, and `lap_h` set the laptop's width, depth, and thickness.
+- `L` sets the arm length. Keep `L` plus 4 mm for the rear stop shorter than your print bed.
 - The parameters that start with `rj_` set the position of the network port notch.
 - `port_end` sets where the port opening ends, measured from the laptop's back edge.
 - The parameters that start with `hex_` set the size, spacing, and number of the hexagonal holes.
@@ -65,7 +68,8 @@ If you make the port opening longer, use fewer hexagonal holes, so the holes do 
 
 1. Print each arm lying on its outer wall.
    The STL files are already turned this way, so the arms print without supports.
-2. Each arm needs a print bed at least 235 mm long.
+2. Each arm needs a print bed at least 176 mm long.
+   It fits the 180 mm square bed of the Bambu Lab A1 mini.
 3. PETG suits this part, because PETG bends less than PLA under a steady load over time.
 
 ## Fit the arms to the desk
